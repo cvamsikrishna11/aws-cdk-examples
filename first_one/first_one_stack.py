@@ -22,6 +22,7 @@ class FirstOneStack(cdk.Stack):
             self,
             id='myS3Bucket',
             bucket_name='aws-cdk-bucket-2021',
-            versioned=True,
-            encryption=_s3.BucketEncryption.KMS_MANAGED
+            versioned=False,
+            encryption=_s3.BucketEncryption.S3_MANAGED,
+            block_public_access=_s3.BlockPublicAccess.BLOCK_ALL
         )
